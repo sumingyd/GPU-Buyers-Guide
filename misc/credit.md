@@ -1,6 +1,6 @@
-# Credit
+# 贡献
 
-No good guide is made by one man, here's credit to those who've helped out:
+没有一个好的指南是由一个人完成的，这里要感谢那些帮助过我们的人:
 
 * [DhinakG](https://github.com/dhinakg)
   * Cleaned up XFX GPU section
