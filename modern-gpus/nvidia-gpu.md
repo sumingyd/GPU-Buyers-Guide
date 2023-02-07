@@ -1,22 +1,22 @@
 # NVIDIA GPUs
 
-## Unsupported NVIDIA GPUs
+## 不支持的 NVIDIA GPUs
 
-### **Kepler Series (GTX 6xx, 7xx)**
+### **Kepler 系列 (GTX 6xx, 7xx)**
 
-#### Highest Supported OS: Big Sur (11)
+#### 最高支持的操作系统: Big Sur (11)
 
-#### Initial Supported OS: Mountain Lion (10.8)
+#### 最初支持的操作系统: Mountain Lion (10.8)
 
-As of Monterey beta 7, Kepler is unsupported. It is still supported in macOS Big Sur. Users have reported issues with the GTX 650 Ti, 660, 660 Ti but this is caused by a driver issue on Apple’s end by not supporting the GK106 core (or quite poorly as the issue seems to be memory leakage which also affects real Macs). Another issue with this generation is lower end products marketed as first generation Kepler are actually using a Fermi core but have identical counterparts running Kepler cores as well(GF 116 vs GK 107 found in the GT 640). **AND PLEASE NOTICE THAT GTX 745, 750, and Ti VARIANTS ARE NOT INCLUDED, THEY'RE NOT KEPLER.**
+截至Monterey beta 7，开普勒不受支持。它仍然在macOS大苏尔得到支持。用户报告了GTX 650 Ti, 660, 660 Ti的问题，但这是由苹果端不支持GK106内核的驱动程序问题引起的(或相当糟糕的问题似乎是内存泄漏，这也影响真正的mac)。这一代的另一个问题是，作为第一代开普勒销售的低端产品实际上使用了费米核心，但也有相同的型号运行开普勒核心(在GT 640中发现的GF 116 vs GK 107)。**请注意，GTX 745、750和Ti的变体不包括在内，它们不是开普勒。**
 
-Supported cards:
+支持的卡：
 
-700 Series:
+700 系列:
 
 * GTX Titan (GK110 Maxwell core)
 * GTX Titan Black (GK110 Maxwell core)
-* GTX Titan Z (One of the few dual GPU cards supported in macOS, but only one core will be in use)
+* GTX Titan Z (macOS支持的少数双GPU卡之一，但只会使用一个核心)
 * GTX 780 Ti
 * GTX 780
 * GTX 770
@@ -27,17 +27,17 @@ Supported cards:
 * GT 720
 * GT 710 (GK208 variant)
 
-600 Series:
+600 系列:
 
-* GTX 690 (Another dual GPU card compatible with macOS, but only one core will be in use)
+* GTX 690 (另一个与macOS兼容的双GPU卡，但只使用一个核心)
 * GTX 680
 * GTX 670
 * GTX 660 Ti
-* GTX 660 (Must be running a GK104 core, not GK106)
-* GTX 650 (GK107 core)
-* GT 640 (GK107/GK208 core)
+* GTX 660 (必须运行GK104核心，而不是GK106)
+* GTX 650 (GK107 核心)
+* GT 640 (GK107/GK208 核心)
 * GT 635
-* GT 630 (GK107/GK208 core)
+* GT 630 (GK107/GK208 核心)
 
 Quadro:
 
@@ -52,53 +52,53 @@ Quadro:
 * Quadro 410
 * NVS 510
 
-Needed kexts:
+需要的kext:
 
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
 
-Extras:
+附加条件：
 
-* `shikigva=40` boot flag: Swaps boardID to iMac14,2 for better Nvidia Support and whitelists patches
+* `shikigva=40` 启动标志:将boardID切换到iMac14,2以获得更好的Nvidia支持和白名单补丁
 
-### **Lovelace Series (RTX 40xx)**
+### **Lovelace 系列 (RTX 40xx)**
 
-#### Highest Supported OS: None
+#### 最高支持的操作系统: 无
 
-Unfortunately no support in any version of macOS as no drivers were ever written even for High Sierra. Not much else to add.
+不幸的是，任何版本的macOS都不支持，因为即使是High Sierra也没有编写驱动程序。没有什么要补充的了。
 
-These cards include:
+这些卡包括:
 
 * RTX 4090
 * RTX 4080
 * RTX 4070 Ti
 * RTX 4070
 
-Workstation:
+工作站:
 
 * RTX 6000 Ada Generation
 
-Data Center:
+数据中心:
 
 * L40
 
-### **Hopper Series (H)**
+### **Hopper 系列 (H)**
 
-#### Highest Supported OS: None
+#### 最高支持的操作系统: 无
 
-Unfortunately no support in any version of macOS as no drivers were ever written even for High Sierra. Not much else to add.
+不幸的是，任何版本的macOS都不支持，因为即使是High Sierra也没有编写驱动程序。没什么可补充的了。
 
-These cards include:
+这些卡包括:
 
 * H100
 
 ### **Ampere Series (RTX 30xx)**
 
-#### Highest Supported OS: None
+#### 最高支持的操作系统: None
 
-Unfortunately no support in any version of macOS as no drivers were ever written even for High Sierra. Not much else to add.
+不幸的是，任何版本的macOS都不支持，因为即使是High Sierra也没有编写驱动程序。没什么可补充的了。
 
-These cards include:
+这些卡包括:
 
 * RTX 3090
 * RTX 3080 Ti
@@ -109,13 +109,13 @@ These cards include:
 * RTX 3060
 * RTX 3050
 
-### **Turing Series (RTX 20xx, GTX 16xx)**
+### **Turing 系列 (RTX 20xx, GTX 16xx)**
 
-#### Highest Supported OS: None
+#### 最高支持的操作系统: 无
 
-Unfortunately no support in any version of macOS as no drivers were ever written even for High Sierra. Not much else to add.
+不幸的是，任何版本的macOS都不支持，因为即使是High Sierra也没有编写驱动程序。没什么可补充的了。
 
-These cards include:
+这些卡包括:
 
 * Titan RTX
 * RTX 2080 Ti
@@ -138,15 +138,15 @@ Quadro:
 * Quadro RTX 5000
 * Quadro RTX 4000
 
-### **Volta Series (V)**
+### **Volta 系列 (V)**
 
-#### Highest Supported OS: High Sierra 17G3025 (10.13.6)*
+#### 最高支持的操作系统: High Sierra 17G3025 (10.13.6)*
 
-#### Initial Supported OS: High Sierra 17G3025 (10.13.6)*
+#### 最初支持的操作系统: High Sierra 17G3025 (10.13.6)*
 
-It turns out that NVIDIA actually released one version of the Web Drivers with Volta support: [387.10.10.15.15.108](https://github.com/dortania/PatcherSupportPkg/blob/master/Universal-Binaries/WebDriver-387.10.10.10.40.140/WebDriver-387.10.10.15.15.108.pkg). However, this version was reported as unstable for some users and NVIDIA pulled it soon afterward. Ever since, no further versions of the Web Drivers have been released with Volta support. Because of the reported bugginess and that NVIDIA has pulled these drivers, we're going to treat them as unsupported.
+NVIDIA实际上发布了一个支持Volta的Web驱动程序版本:[387.10.10.15.15.108](https://github.com/dortania/PatcherSupportPkg/blob/master/Universal-Binaries/WebDriver-387.10.10.10.40.140/WebDriver-387.10.10.15.15.108.pkg). 然而，据报道这个版本对一些用户来说不稳定，NVIDIA随后很快将其撤下。从那以后，再没有发布支持Volta的Web驱动程序版本。由于报告的漏洞和NVIDIA已经撤销了这些驱动程序，我们将把它们视为不受支持。
 
-These cards include:
+这些卡包括:
 
 * Titan V
 * Titan V CEO Edition
@@ -155,21 +155,21 @@ Quadro:
 
 * Quadro GV100
 
-::: tip Note
+::: tip 注意
 
-Some users have reported that version 387.10.10.15.15.108 of the Web Drivers may support all versions of High Sierra. However, since NVIDIA only released it for 17G3025, we are only specifying that version explicitly.
+一些用户报告说，387.10.10.15.15.108版本的Web驱动程序可能支持所有版本的High Sierra。然而，由于NVIDIA仅为17G3025发布了它，因此我们只显式指定该版本。
 
 :::
 
-### **Kepler Series(GK106 Variants)**
+### **Kepler 系列(GK106 Variants)**
 
-GPUs running the GK106 core have the unfortunate consequence of having a serious issue regarding VRAM leakage. This means that there's a high chance of distortion and overall instability when running these GPUs, which unfortunately has no real solution as even installing the Web Drivers has no effect. A list of GPUs with this core can be found [here](https://www.techpowerup.com/gpu-specs/nvidia-gk106.g186).
+运行GK106内核的gpu有一个不幸的后果，即VRAM泄漏。这意味着在运行这些gpu时，有很高的失真和整体不稳定的可能性，不幸的是，这没有真正的解决方案，因为即使安装Web驱动程序也没有影响。带有该内核的gpu列表可以在[这里](https://www.techpowerup.com/gpu-specs/nvidia-gk106.g186).
 
-Second generation Kepler:
+第二代 Kepler:
 
 * GT 740 (GK106 variant)
 
-First generation Kepler:
+第一代 Kepler:
 
 * GTX 660
 * GTX 650 Ti
@@ -180,13 +180,15 @@ Quadro:
 
 * K4000
 
-### **Fermi rebranded(GF108, GF117 and GF119)**
+### **Fermi rebranded(GF108, GF117 和 GF119)**
 
-#### Highest Supported OS: High Sierra (10.13.6)
+#### 最高支持的操作系统: High Sierra (10.13.6)
 
-#### Initial Supported OS: Lion (10.7)
+#### 最初支持的操作系统: Lion (10.7)
 
-Since NVIDIA can't comply to any naming conventions, they decided to make some 600/700 series cards based on the older and incompatible Fermi architecture. These cards include:
+由于NVIDIA无法遵守任何命名约定，他们决定基于较旧且不兼容的Fermi架构制作600/700系列卡。
+
+这些卡包括:
 
 * GT 730 (GF108 variant)
 * GT 720A
@@ -197,15 +199,15 @@ Since NVIDIA can't comply to any naming conventions, they decided to make some 6
 * GT 620
 * GT 610
 
-### **Pascal Series (GTX 10xx)**
+### **Pascal 系列 (GTX 10xx)**
 
-#### Highest Supported OS: High Sierra (10.13.6)
+#### 最高支持的操作系统: High Sierra (10.13.6)
 
-#### Initial Supported OS: Sierra (10.12.4)
+#### 最初支持的操作系统: Sierra (10.12.4)
 
-Well pretty sure most users know what going on with Pascal and Maxwell, but I’ll just mention it quickly here. No support for these cards in Mojave and up, but macOS Sierra and High Sierra do support these cards with NVIDIA's somewhat shoddy drivers and Lilu + WhateverGreen. Make sure to update to build 17G14042 from the App Store before installing the Web Drivers on High Sierra.
+我很确定大多数用户都知道Pascal和Maxwell是怎么回事，但我在这里简单提一下。Mojave和以上版本不支持这些卡，但macOS Sierra和High Sierra确实支持这些卡，带有NVIDIA的一些低劣驱动程序和Lilu + WhateverGreen。在High Sierra上安装Web驱动程序之前，请确保从App Store更新到17G14042版本。
 
-Supported cards:
+支持的卡：
 
 * GTX Titan X (GP 102-400 Pascal core)
 * GTX Titan Xp (GP 102-450 Pascal core)
@@ -213,11 +215,11 @@ Supported cards:
 * GTX 1080
 * GTX 1070 Ti
 * GTX 1070
-* GTX 1060( **Note**: GP104/GDDR5X variants are not supported by the Web Drivers)
+* GTX 1060(**注意**:Web驱动不支持GP104/GDDR5X变体)
 * GTX 1050 Ti
 * GTX 1050
 * GT 1030
-* GT 1010 (should theoretically work, but unverified)
+* GT 1010 (理论上可行，但未经证实)
 
 Quadro:
 
@@ -231,26 +233,26 @@ Quadro:
 * Quadro P600
 * Quadro P400
 
-Needed kexts:
+需要的kext:
 
 * [Nvidia's Web Drivers](https://images.nvidia.com/mac/pkg/387/WebDriver-387.10.10.10.40.140.pkg)
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
 
-Extras:
+附加条件：
 
-* `shikigva=40` boot flag: Swaps boardID to iMac14,2 for better Nvidia Support and whitelists patches
-* `nvda_drv_vrl=1` boot flag: Used for enabling the Web Drivers
+* `shikigva=40` 启动标志:将boardID切换到iMac14,2以获得更好的Nvidia支持和白名单补丁
+* `nvda_drv_vrl=1` 引导标志:用于启用网络驱动程序
 
-### **Maxwell Series (GTX 9xx, 745, 750/Ti)**
+### **Maxwell 系列 (GTX 9xx, 745, 750/Ti)**
 
-#### Highest Supported OS: High Sierra (10.13.6)
+#### 最高支持的操作系统: High Sierra (10.13.6)
 
-#### Initial Supported OS: Yosemite (10.10.0)
+#### 最初支持的操作系统: Yosemite (10.10.0)
 
-Same idea as Pascal, though the naming scheme is a bit odd as the GTX 745, 750 and 750 Ti are all Maxwell based even though they’re being marketed with the Kepler line so be wary when buying
+和Pascal的想法一样，尽管命名方案有点奇怪，因为GTX 745,750和750 Ti都是基于麦克斯韦，尽管它们是与开普勒系列一起销售的，所以在购买时要谨慎
 
-Supported cards:
+支持的卡：
 
 * GTX Titan X (GM200 Maxwell core)
 * GTX 980 Ti
@@ -272,13 +274,13 @@ Quadro:
 * Quadro K1200
 * Quadro K620
 
-Needed kexts:
+需要的kext:
 
 * [NVIDIA's Web Drivers](https://images.nvidia.com/mac/pkg/387/WebDriver-387.10.10.10.40.140.pkg)
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
 
-Extras:
+附加条件：
 
-* `shikigva=40` boot flag: Swaps boardID to iMac14,2 for better Nvidia Support and whitelists patches
-* `nvda_drv_vrl=1` boot flag: Used for enabling the Web Drivers
+* `shikigva=40` 启动标志:将boardID切换到iMac14,2以获得更好的Nvidia支持和白名单补丁
+* `nvda_drv_vrl=1` 引导标志:用于启用网络驱动程序
