@@ -2,35 +2,35 @@
 
 ## **Sandy Bridge 2XXX**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Snow Leopard (10.6)
+### 最初支持的操作系统: Snow Leopard (10.6)
 
-Unfortunately, Mojave dropped support for these iGPUs, but luckily we can actually get these iGPUs working by using old kexts (though no Metal support so things are a bit iffy). The [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/348) is the best way to add support for these GPUs. However, OCLP is geared towards real Macs and while it will work on Hackintoshes, there is no official support. Initial support was introduced with macOS 10.6 and is not supported by the [Intel framebuffer patching guide](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/?tab=comments#comment-2626271)
+不幸的是，Mojave放弃了对这些igpu的支持，但幸运的是，我们可以通过使用旧的kext让这些igpu工作(尽管没有Metal支持，所以事情有点不确定)。[OpenCore Legacy补丁程序](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/348) 是添加对这些gpu支持的最佳方式。然而，OCLP是面向真正的mac的，虽然它可以在黑苹果上工作，但没有官方支持。最初的支持在macOS 10.6中引入，[Intel framebuffer补丁指南](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/?tab=comments#comment-2626271)
 
-Supported iGPUs:
+支持的iGPUs:
 
-* HD 2000 (Can only be used for Quick Sync tasks, no full acceleration)
+* HD 2000 (只能用于快速同步任务，不能完全加速)
 * HD 3000
 * HD P3000
 
 Framebuffer
 
-* AAPL,snb-platform-id (desktop):
-  * 0x00030010 (default)
-    * 10000300 (hex swapped)
-* AAPL,snb-platform-id (laptop):
-  * 0x00010000 (default)
-    * 00000100 (hex swapped)
+* AAPL,snb-platform-id (桌面):
+  * 0x00030010 (默认)
+    * 10000300 (十六进制交换)
+* AAPL,snb-platform-id (笔记本):
+  * 0x00010000 (默认)
+    * 00000100 (十六进制交换)
 
-Files needed for HD 2000:
+HD 2000所需的文件:
 
 * AppleIntelHDGraphicsFB.kext
 * AppleIntelHDGraphicsGA.plugin
 * AppleIntelHDGraphicsGLDriver.bundle
 * AppleIntelHDGraphicsVADriver.bundle
 
-Files needed for HD 3000:
+HD 3000所需的文件::
 
 * AppleIntelHD3000Graphics.kext
 * AppleIntelHD3000GraphicsGA.plugin
@@ -39,7 +39,7 @@ Files needed for HD 3000:
 * AppleIntelSNBGraphicsFB.kext
 * AppleIntelSNBVA.bundle
 
-Needed kexts:
+需要的 kexts:
 
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
@@ -47,30 +47,30 @@ Needed kexts:
 
 ## **Westmere i3/5/7-xxx**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Snow Leopard (10.6)
+### 最初支持的操作系统: Snow Leopard (10.6)
 
-Unfortunately, Mojave dropped support for these iGPUs, but luckily we can actually get these iGPUs working by using old kexts (though no Metal support so things are a bit iffy). The [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/348) is the best way to add support for these GPUs. However, OCLP is geared towards real Macs and while it will work on Hackintoshes, there is no official support.
+不幸的是，Mojave放弃了对这些igpu的支持，但幸运的是，我们可以通过使用旧的kext让这些igpu工作(尽管没有Metal支持，所以事情有点不确定)。[OpenCore Legacy补丁程序](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/348) 是添加对这些gpu支持的最佳方式。然而，OCLP是面向真正的mac的，虽然它可以在黑苹果上工作，但没有官方支持
 
-* HD Graphics (yup, that's all they called them)
+* HD Graphics (是的，他们就是这么称呼他们的)
 
-Needed kexts:
+需要的 kexts:
 
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
 
 ## **4th Gen GMA**
 
-### Highest Supported OS: Lion (10.7)
+### 支持的最高操作系统: Lion (10.7)
 
-### Initial Supported OS: Leopard (10.5)
+### 最初支持的操作系统: Leopard (10.5)
 
 Native (Lion):
 
 * GMA X3100
 
-Unsupported:
+不支持:
 
 * GMA X4500HD
 * GMA X4500
@@ -82,20 +82,20 @@ Unsupported:
 
 ## **3rd Gen GMA**
 
-### Highest Supported OS: Lion (10.7)
+### 支持的最高操作系统: Lion (10.7)
 
-### Initial Supported OS: Tiger (10.4)
+### 最初支持的操作系统: Tiger (10.4)
 
 Native (Lion):
 
 * GMA 950
 
-With a bit of work (Snow Leopard):
+加上一点工作 (Snow Leopard):
 
 * GMA 900
 
-Unsupported:
+不支持:
 
 * GMA 3150
-  * Partialy supported, see here: [Legacy GPU Patching](https://dortania.github.io/OpenCore-Post-Install/gpu-patching/legacy-intel/)
+  * 部分支持，参见这里:[Legacy GPU 补丁](https://sumingyd.github.io/OpenCore-Post-Install/gpu-patching/legacy-intel/)
 * GMA 3100

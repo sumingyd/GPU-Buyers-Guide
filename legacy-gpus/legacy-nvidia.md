@@ -1,42 +1,42 @@
 # Legacy Nvidia
 
-So what's this section for? Well a decent chunk of users have been wondering what the highest supported OS would be for their GPU if the latest isn't supported. The GPUs listed have **theoretical** support but keep in mind that they're not guaranteed unless shipped in a [Mac Pro](https://support.apple.com/en-lamr/HT201805), but even that is flaky. Also keep in mind that this list will likely change as research is done on what device IDs are supported.
+这部分是干什么用的?好吧，相当多的用户一直在想，如果最新的不支持，他们的GPU支持的最高操作系统是什么。列出的gpu有**理论上**的支持，但请记住，除非在[Mac Pro](https://support.apple.com/en-lamr/HT201805)中安装，否则不能保证它们得到支持，但即使这样也不可靠。同时请记住，随着对所支持的设备id进行研究，这个列表可能会发生变化。
 
-Also to note: `InjectNvidia` may be required for these GPUs. OpenCore users will need to create some [EFI strings](http://forum.netkas.org/index.php?topic=222.0).
+还要注意:这些gpu可能需要`InjectNvidia`。OpenCore用户将需要创建一些[EFI字符串](http://forum.netkas.org/index.php?topic=222.0).
 
-And for those wondering, it is possible to run Mojave or even Catalina with these GPUs with a bit of work. Do keep in mind stability is not guaranteed and requires you to modify the macOS file system. Try at your own risk: [source](https://www.insanelymac.com/forum/topic/339035-pre-release-macos-catalina/?page=21&tab=comments#comment-2677545)
+对于那些好奇的人来说，我们可以使用这些gpu运行Mojave甚至Catalina。请记住，稳定性没有保证，需要修改macOS文件系统。自担风险:[来源](https://www.insanelymac.com/forum/topic/339035-pre-release-macos-catalina/?page=21&tab=comments#comment-2677545)
 
-## **Fermi series (4xx, 5xx)**
+## **Fermi 系列 (4xx, 5xx)**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Lion (10.7)
+### 初始支持的操作系统: Lion (10.7)
 
-Something to note with Fermi GPUs is that while they may be supported in macOS High Sierra, users have experienced issues with stability. If you're experiencing instability as well, you'll want to downgrade to macOS Sierra.
+需要注意的是，虽然macOS High Sierra可能支持Fermi gpu，但用户遇到了稳定性问题。如果你也在经历不稳定，你会想要降级到macOS Sierra。
 
-500 series:
+500 系列:
 
 * GTX 570
 
-400 series:
+400 系列:
 
 * GTX 470
 
-## **Tesla series (1xx, 2xx, 3xx)**
+## **Tesla 系列 (1xx, 2xx, 3xx)**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Leopard (10.5)
+### 初始支持的操作系统: Leopard (10.5)
 
-Similar to Fermi, these GPUs are supported by High Sierra, but don't generally experience the same issues that Fermi does in High Sierra.
+与Fermi类似，这些gpu也由High Sierra支持，但通常不会遇到与Fermi在High Sierra中遇到的相同问题。
 
-300 series:
+300 系列:
 
 * GT 340
 * GT 330
 * GT 320
 
-200 series:
+200 系列:
 
 * GTX 285
 * GTX 280
@@ -46,28 +46,28 @@ Similar to Fermi, these GPUs are supported by High Sierra, but don't generally e
 * GT 230
 * GT 220
 
-100 series:
+100 系列:
 
 * GT 140
 * GT 130
 * GT 120
 
-## **GeForce 9 (9xxx) series**
+## **GeForce 9 (9xxx) 系列**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Leopard (10.5)
+### 初始支持的操作系统: Leopard (10.5)
 
 * 9800 GT
 * 9600 GT
 * 9400 GT
 * 9300 GT
 
-## **GeForce 8 (8xxx) series**
+## **GeForce 8 (8xxx) 系列**
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Leopard (10.5)
+### 初始支持的操作系统: Leopard (10.5)
 
 * GeForce 8800
 
@@ -75,13 +75,13 @@ Quadro:
 
 * FX 5600
 
-## **GeForce 7 (7xxx) series**
+## **GeForce 7 (7xxx) 系列**
 
-### Highest Supported OS: Lion (10.7)
+### 支持的最高操作系统: Lion (10.7)
 
-### Initial Supported OS: Panther (10.3)
+### 初始支持的操作系统: Panther (10.3)
 
-Support was dropped in OS X Lion because the drivers were only compiled for 32-bit kernels.
+OS X Lion放弃了支持，因为驱动程序只针对32位内核编译。
 
 * 7600 GT
 * 7300 GT
@@ -90,10 +90,10 @@ Quadro:
 
 * FX 4500
 
-## **GeForce 6 (6xxx) series**
+## **GeForce 6 (6xxx) 系列**
 
-### Highest Supported OS: Lion (10.7)
+### 支持的最高操作系统: Lion (10.7)
 
-### Initial Supported OS: Panther (10.3)
+### 初始支持的操作系统: Panther (10.3)
 
 * 6600 GT

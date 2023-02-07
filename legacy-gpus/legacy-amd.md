@@ -1,14 +1,14 @@
 # Legacy AMD
 
-So what's this section for? Well, a decent chunk of users have been wondering what the highest supported OS would be for their GPU if the latest isn't supported. The GPUs listed have **theoretical** support but keep in mind that they're not guaranteed to work unless shipped in a [Mac Pro](https://support.apple.com/en-lamr/HT201805). Also keep in mind that this list will likely change as research is done on what device IDs are supported.
+那么这部分是做什么的呢?嗯，相当多的用户一直在想，如果不支持最新的操作系统，他们的GPU支持的最高操作系统是什么。列出的gpu有**理论上**的支持，但请记住，除非在[Mac Pro](https://support.apple.com/en-lamr/HT201805)中安装，否则不能保证它们正常工作。同时请记住，随着对所支持的设备id进行研究，这个列表可能会发生变化。
 
-Also to note: `InjectATI` may be required for these GPUs.
+还要注意:这些gpu可能需要`InjectATI`。
 
-## HD 6000 Series (6xxx)
+## HD 6000 系列 (6xxx)
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Snow Leopard (10.6)
+### 最初支持的操作系统: Snow Leopard (10.6)
 
 * HD 6230
 * HD 6250
@@ -25,11 +25,11 @@ Also to note: `InjectATI` may be required for these GPUs.
 * HD 6970
 * FirePro V7900
 
-## HD 5000 Series (5xxx)
+## HD 5000 系列 (5xxx)
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Snow Leopard (10.6)
+### 最初支持的操作系统: Snow Leopard (10.6)
 
 * HD 5450
 * HD 5470
@@ -42,43 +42,43 @@ Also to note: `InjectATI` may be required for these GPUs.
 * HD 5850
 * HD 5870
 
-## HD 4000 Series (4xxx)
+## HD 4000 系列 (4xxx)
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Snow Leopard (10.6)
+### 最初支持的操作系统: Snow Leopard (10.6)
 
 * HD 4870
 
-## HD 3000 Series (3xxx)
+## HD 3000 系列 (3xxx)
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Tiger (10.4)
+### 最初支持的操作系统: Tiger (10.4)
 
 * HD 3870
 
-## HD 2000 Series (2xxx)
+## HD 2000 系列 (2xxx)
 
-### Highest Supported OS: High Sierra (10.13.6)
+### 支持的最高操作系统: High Sierra (10.13.6)
 
-### Initial Supported OS: Tiger (10.4)
+### 最初支持的操作系统: Tiger (10.4)
 
 * HD 2600 XT
 * HD 2400 XT
 
-## X1000 Series (1xxx)
+## X1000 系列 (1xxx)
 
-### Highest Supported OS: Lion (10.7.5)
+### 支持的最高操作系统: Lion (10.7.5)
 
-### Initial Supported OS: Tiger (10.4)
+### 最初支持的操作系统: Tiger (10.4)
 
 * X1900 XT
 * X1600
 * X1300
 
-## X800 Series (8xx)
+## X800 系列 (8xx)
 
-### Highest Supported OS: Lion (10.7.5)
+### 支持的最高操作系统: Lion (10.7.5)
 
-### Initial Supported OS: Panther (10.3)
+### 最初支持的操作系统: Panther (10.3)
