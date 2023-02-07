@@ -1,59 +1,59 @@
-# Boot Flags
+# 引导标志
 
-This little section here is a short explainer on some of the more commonly useful boot flags used for getting your GPU working. Do note, most of these boot-flags are from [WhateverGreen](https://github.com/acidanthera/WhateverGreen) so refer to their [FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/) for a complete list of boot flags. And for a list of all `shikigva boot arguments`, see [here](https://github.com/acidanthera/WhateverGreen/blob/master/WhateverGreen/kern_shiki.hpp#L35-L74) and DRM boot-flags can be found here: [WhateverGreen's DRM chart](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md)
+这一小部分是一个简短的解释一些更常用的引导标志，用于让你的GPU工作。请注意，大多数引导标志来自[WhateverGreen](https://github.com/acidanthera/WhateverGreen) 因此请参阅他们的 [FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/) 以获得引导标志的完整列表。关于所有l `shikigva引导参数`的列表，请参见[这里](https://github.com/acidanthera/WhateverGreen/blob/master/WhateverGreen/kern_shiki.hpp#L35-L74) 和DRM引导标志可以在这里找到:[WhateverGreen的DRM图表](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md)
 
-## AMD Boot Arguments
+## AMD 引导参数
 
 * `shikigva=40` + `shiki-id=Mac-7BA5B2D9E42DDD94`
-  * Swaps boardID with iMacPro1,1
-  * Allows for Polaris, Vega and Navi GPUs to handle all types of rendering, useful for SMBIOS which expect an iGPU
-  * See here for more info: [Fixing DRM](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)
+  * 将boardID与imacpro1,1进行互换
+  * 允许Polaris, Vega和Navi gpu处理所有类型的渲染，对于需要iGPU的SMBIOS很有用
+  * 参见这里了解更多信息:[修复DRM](https://sumingyd.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)
 * `radpg=15`
-  * Fixes initialization for HD 7730/7750/7770/R7 250/R7 250X
+  * 修正了HD 7730/7750/7770/R7 250/R7 250X的初始化
 * `-raddvi`
-  * Fixes DVI `connector-type` for  290X, 370, etc
+  * 修复了290X、370等的DVI `连接类型`
 * `-radvesa`
-  * Forces GPU into VESA mode(no GPU acceleration), useful for troubleshooting
-  * Apple's built in version of this flag is `-amd_no_dgpu_accel`
+  * 强制GPU进入VESA模式(没有GPU加速)，有助于故障排除
+  * 苹果的内置版本是`-amd_no_dgpu_accel`
 * `agdpmod=vit9696`
-  * Disables `board-id` check, may be needed for when screen turns black after finishing booting
+  * 禁用`board-id`检查，在完成启动后屏幕变黑时可能需要启用
 * `agdpmod=pikera`
-  * Renames `board-id` to `board-ix` effectively disabling boardID checks, this is based off of Pike.R.A's work [here](https://pikeralpha.wordpress.com/2015/11/23/patching-applegraphicsdevicepolicy-kext/)
-  * This is also required for all Navi GPUs due to the difference in framework with the x6000 drivers
+  * 将`board-id`重命名为`board-ix`，有效地禁用了boardID检查，这是基于Pike.RA的的作品[在这里](https://pikeralpha.wordpress.com/2015/11/23/patching-applegraphicsdevicepolicy-kext/)
+  * 由于框架与x6000驱动程序的差异，这对于所有Navi gpu也是必需的
 
-## Nvidia Boot Arguments
+## Nvidia 引导参数
 
 * `nvda_drv=1`
-  * A boot flag that refuses to die, **STOP USING IT**. Used for enabling Nvidia's WebDrivers pre-macOS Sierra but no longer works as it was moved to an NVRAM variable instead.
-    * For Clover, use `NvidiaWeb` under `System Parameters` in your config.plist.
-    * For OpenCore, use `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> nvda_drv: <31>` in your config.plist.
-  * The WebDrivers in Sierra and High Sierra also support another boot argument called `nvda_drv_vrl=1`, this will actually do the same thing as `nvda_drv=1` did in previous versions
+  * 拒绝死亡的启动标志，**停止使用它**。用于启用macos Sierra之前的Nvidia网络驱动程序，但由于它被移动到NVRAM变量而不再工作。
+    * 对于Clover来说，在config.plist的`System Parameters`下使用`NvidiaWeb`。
+    * 对于OpenCore，在config.plist中使用`NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> nvda_drv: <31>`。
+  * Sierra和High Sierra的网络驱动程序还支持另一个名为`nvda_drv_vrl=1`的引导参数，这实际上与之前版本中的`nvda_drv=1`所做的事情相同
 * `nv_disable=1`
-  * Forces GPU into VESA mode(no GPU acceleration), useful for troubleshooting and when having issues installing Nvidia's WebDrivers. This is a macOS flag so WEG is not needed.
+  * 强制GPU进入VESA模式(没有GPU加速)，用于故障排除和安装Nvidia的网络驱动程序时。这是macOS的标志，所以不需要WEG。
 * `shikigva=40`
-  * Swaps boardID with iMac14,2
-  * Useful for SMBIOS that don't expect a Nvidia GPU, however WhateverGreen should handle patching by itself
+  * 与iMac14、2交换boardID
+  * 适用于不期望Nvidia GPU的SMBIOS，但是WhateverGreen应该自己处理补丁
 * `shikigva=1`
-  * Needed when you're wanting to use your iGPU's display out along with the dGPU, allows the iGPU to handle hardware decoding even when not using a connector-less framebuffer
+  * 当您想要将iGPU的显示与dGPU一起使用时，它允许iGPU处理硬件解码，即使不使用无连接的framebuffer
 * `shikigva=4`
-  * Needed to support hardware accelerated video decoding on systems that are newer than Haswell, may need to be used with `shikigva=12` to patch the needed processes
+  * 需要在比Haswell更新的系统上支持硬件加速的视频解码，可能需要使用`shikigva=12`来为所需的进程打补丁
 * `agdpmod=vit9696`
-  * Disables `board-id` check, may be needed for when screen turns black after finishing booting
+  * 禁用`board-id`检查，在完成启动后屏幕变黑时可能需要启用
 * `agdpmod=pikera`
-  * Swaps `board-id` for `board-ix`, needed for disabling string comparison which is useful for non-iMac13,2/iMac14,2 SMBIOS
+  * 将`board-id`转换为`board-ix`，用于禁用字符串比较，这对非imac13、2/iMac14、2 SMBIOS非常有用
 
-## Intel Boot Arguments
+## Intel 引导参数
 
 * `-wegnoegpu`
-  * disables all GPUs excluding the iGPU, most relevant for users with Nvidia wanting to run Mojave+
+  * 禁用除iGPU之外的所有gpu，对于Nvidia希望运行Mojave+的用户来说最重要
 * `-igfxnohdmi`
-  * Disables DisplayPort to HDMI Audio Conversion
+  * 禁用显示端口到HDMI音频转换
 * `-cdfon`
-  * Performs numerous patches required for enabling HDMI 2.0 support
+  * 为启用HDMI 2.0支持而打许多补丁
 * `-igfxvesa`
-  * Forces GPU into VESA mode(no GPU acceleration), useful for troubleshooting
+  * 强制GPU进入VESA模式(没有GPU加速)，用于故障排除
 * `igfxonln=1`
-  * Forces all displays online, useful for resolving screen wake issues in 10.15.4+ on Coffee and Comet Lake
+  * 强制所有显示在线，有助于解决10.15.4+在咖啡和彗星湖上的屏幕唤醒问题
 * `igfxfw=2`
-  * Enables loading Apple's GUC firmware for iGPUs, requires a 9th Gen chipset or newer(ie Z390)
-  * See here for more info: [Fixing DRM](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)
+  * 允许为igpu加载苹果的GUC固件，需要第9代或更新的芯片组(如Z390)
+  * 参见这里了解更多信息:[修复DRM](https://sumingyd.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)

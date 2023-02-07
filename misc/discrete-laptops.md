@@ -1,25 +1,25 @@
-# Laptop dGPUs
+# 笔记本电脑 dGPUs
 
-## Understanding what discrete laptop GPUs work
+## 了解离散型笔记本电脑gpu的工作原理
 
-This is a little subsection to talk about how you can find out if your dGPU would work in macOS.
+这是一个关于如何确定你的dGPU是否可以在macOS中工作的小节。
 
-## What in the world is a MUX chip?
+## MUX芯片到底是什么?
 
-So a MUX chip is a multiplexer which handles how the iGPU and dGPU are routed to the internal display, with the dGPU always being hooked up-to the external outputs like HDMI and DisplayPort. This is what real MacBooks have for their graphics switching.
+因此MUX芯片是一个多路复用器，它处理iGPU和dGPU如何路由到内部显示器，而dGPU总是被连接到外部输出，如HDMI和DisplayPort。这是真正的macbook的图形切换功能。
 
-> So where's the issue with normal laptops?
+> 那么普通笔记本电脑的问题在哪里?
 
-Most laptops on the market _don't_ have this chip, instead opting for a software based solution like Nvidia Optimus where it will actually make a virtual window and reroute the dGPUs signal into the iGPU. This creates a delay and uses up more battery as you're running 2 GPUs at the same time, so Apple's solution is the most ideal but unfortunately costs more and is more complex to engineer. And the other solution means that there would need to be a lot of driver support on macOS for Optimus Support(which there is none of). [A bit more technical info on the matter](https://www.reddit.com/r/hackintosh/comments/6omyzc/nvidia_optimus_really_never_going_to_happen_for/dkj20xt/)
+市场上的大多数笔记本电脑都**没有**这种芯片，而是选择了基于软件的解决方案，如Nvidia Optimus，它实际上会创建一个虚拟窗口，并将dGPUs信号重新路由到iGPU。当你同时运行2个gpu时，这会产生延迟并消耗更多电池，所以苹果的解决方案是最理想的，但不幸的是成本更高，设计更复杂。另一个解决方案意味着在macOS上需要有大量的驱动程序支持来支持Optimus(实际上没有)。[关于这个问题的更多技术信息](https://www.reddit.com/r/hackintosh/comments/6omyzc/nvidia_optimus_really_never_going_to_happen_for/dkj20xt/)
 
-> So how do I find out if my laptop has a MUX chips?
+> 那么我如何知道我的笔记本电脑是否有MUX芯片?
 
-This is the difficult part as most laptop vendors won't even mention it at all anywhere even if they have one, easiest way to tell is if the display outs are directly tied to the dGPU. Mainly Alienware and Razer include such chips but most manufacturers opt for the lower price software solution for both AMD and Nvidia GPUs.
+这是最困难的部分，因为大多数笔记本厂商甚至不会在任何地方提到它，即使他们有一个，最简单的方法是判断显示屏是否直接绑定到dGPU。主要是Alienware和Razer包括这样的芯片，但大多数制造商为AMD和Nvidia gpu选择较低价格的软件解决方案。
 
-Luckily for us, the GPU passthrough site has a decent sized list with which GPUs have a MUX and how they work
+幸运的是，GPU直通网站有一个相当大的列表，列表中有哪些GPU有MUX，以及它们是如何工作的
 
-* [Notebook Compatibility List](https://gpu-passthrough.com)
+* [笔记本兼容列表](https://gpu-passthrough.com)
 
 ![MUX Configurations](../images/LaptopGPUs.png)
 
-* **Note**: You must be able to either set the MUX to your internal display in the BIOS, or be able to have physical outputs work with the dGPU by default. Otherwise, there is no software in macOS that can control your MUX's output.
+* **注意**:您必须能够将MUX设置为BIOS中的内部显示，或者能够在默认情况下使物理输出与dGPU一起工作。否则,没有软件macOS可以控制你MUX的输出。

@@ -1,22 +1,22 @@
-# KVM Configurations
+# KVM 配置
 
-For users who plan to boot with a KVM(Kernel Virtual Machine) configuration should pay attention to the below:
+对于计划使用KVM(内核虚拟机)配置启动的用户，应注意以下事项:
 
-A very important thing to note with GCN-based AMD GPUs is that they experience what is known as the "reset bug". What this refers to is when you shut down the macOS VM, the GPU can enter a bad state that requires the host itself to reboot. Unfortunately while AMD still hasn't released a proper fix for this, there are some options available(Note they are not 1 size fits all, so they may require some tinkering on your end):
+需要注意的一件非常重要的事情是，基于gcn的AMD gpu会遇到所谓的“重置错误”。这指的是当你关闭macOS虚拟机时，GPU可能会进入一个坏状态，需要主机自己重启。不幸的是，虽然AMD还没有发布一个适当的修复，但有一些可用的选项(注意，它们不是一个大小适合所有，所以它们可能需要一些修补程序):
 
-* [Vega 10/12 Fix](https://forum.level1techs.com/t/vega-10-and-12-reset-application/145666)
-  * Currently there is no fix for Vega 20 based GPUs
-* [Navi 10 Fix](https://forum.level1techs.com/t/navi-reset-kernel-patch/147547)
+* [Vega 10/12 修复](https://forum.level1techs.com/t/vega-10-and-12-reset-application/145666)
+  * 目前没有修复基于Vega 20的gpu
+* [Navi 10 修复](https://forum.level1techs.com/t/navi-reset-kernel-patch/147547)
 
-And regarding how to avoid GPUs with this issue, we recommend the following:
+关于如何避免gpu出现此问题，我们建议如下:
 
-* Try to follow as close to reference design GPUs
-  * Sapphire makes AMD's reference GPUs so they're the go-to vendor
-* Avoid OEMs who commonly make heavily modified VBIOS
-  * XFX, PowerColor, HIS and VisionTek are the main brands to avoid
-* Any 7950/70 or 280/X that supports UEFI boot
-* Any 7850/70 or 270/X that supports UEFI boot
-* Any FirePro Card Based on CGN 1.0 that supports UEFI boot
-  * FirePro W7000, 8000, 9000, and D300, 500, 700 Cards
-* Any RX 4XX/5XX Sapphire card
-  * There's still issues with regular Polaris GPUs so pay close attention
+* 尽量遵循参考gpu的设计
+  * Sapphire提供AMD的参考gpu，所以他们是首选供应商
+* 避免那些经常大量修改VBIOS的oem
+  * XFX、PowerColor、HIS和VisionTek是需要避开的主要品牌
+* 任何支持UEFI引导的7950/70或280/X
+* 任何支持UEFI引导的7850/70或270/X
+* 任何基于CGN 1.0且支持UEFI引导的FirePro卡
+  * FirePro的W7000、8000、9000和D300、500、700卡
+* 任何RX 4XX/5XX蓝宝石卡
+  * 常规的Polaris gpu仍然存在问题，所以要密切关注
