@@ -15,6 +15,8 @@
 * RX 6600
 * RX 6600 XT
 
+Note: Most Navi 23 cards currently require the boot argument `agdpmod=pikera` to get a display out.
+
 需要的kext:
 
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
@@ -26,7 +28,7 @@
 
 #### 初始支持的操作系统: Big Sur (11.4)
 
-从11.4开始，苹果已经添加了Navi 21支持!
+从11.4开始，苹果已经添加了Navi 21支持.
 
 支持的卡：
 
@@ -35,7 +37,7 @@
 * RX 6900 XT
   * WhateverGreen 1.5.2支持XTXH变体(设备ID: `0x73AF`)，并将` Device - ID `伪造为`0x73BF`。
 
-注意:一些Navi 21卡目前需要启动参数`agdpmod=pikera`才能显示。
+注意:大多数Navi 21卡目前需要启动参数`agdpmod=pikera`才能显示。
 
 需要的kext:
 
@@ -48,7 +50,7 @@
 
 #### 初始支持的操作系统: Catalina (10.15.1)
 
-目前，在10.15.1，苹果终于增加了RDNA和Navi支持!
+目前，截至10.15.1，苹果终于增加了RDNA和Navi支持。
 
 支持的卡：
 
@@ -65,7 +67,7 @@ Radeon Pro:
 * Radeon Pro W5500
 * Radeon Pro W5700
 
-注意:大多数Navi卡目前需要启动参数`agdpmod=pikera`才能正确显示。
+注意:大多数Navi 10和14卡目前需要启动参数`agdpmod=pikera`才能正确显示。
 
 需要的kext:
 
@@ -130,7 +132,7 @@ Radeon Pro:
 
 关于北极星，基本上只要运行北极星或巴芬核心，每种卡的型号都是支持的。 像RX 550这样的低端卡可能运行一个Lexa核心，这意味着在macOS中不支持。
 
-你应该避免使用Polaris系列的唯一品牌是XFX, PowerColour, HIS和VisionTek**，因为许多用户都有引导加载程序和macOS引导问题。其他用户找到了修复/解决方法，尽管没有一致的。这似乎是由于有一个奇怪的VBIOS不能很好地与macOS通信，唯一的解决方案是闪烁另一个VBIOS，这对大多数用户来说不是理想的。
+Polaris系列中，您应该避免的唯一品牌是XFX(460/560型号)、PowerColor、HIS和VisionTek**，因为许多用户都有引导加载程序和macOS引导问题。其他用户找到了修复/解决方法，尽管没有一致的。这似乎是由于有一个奇怪的VBIOS不能很好地与macOS通信，唯一的解决方案是强刷另一个VBIOS，这对大多数用户来说不是理想的。
 
 支持的卡：
 
